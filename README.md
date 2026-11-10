@@ -4,10 +4,17 @@ Marketing and legal pages for CartDistrict (static HTML and CSS, no build step).
 
 ## Branches
 
-- `production`: live site, deployed to Cloudflare Pages production.
-- `staging`: preview site, deployed to the Cloudflare Pages `staging` branch alias.
+- `production`: live site. Worker `cartdistrict`.
+- `staging`: preview site. Worker `cartdistrict-staging`.
 
 Change `staging` first, check the preview, then merge into `production`.
+
+## Deploy
+
+Files served live in `public/`. Config in `wrangler.jsonc`.
+
+    npx wrangler deploy --env staging   # from the staging branch
+    npx wrangler deploy                 # from the production branch
 
 ## Pages
 
@@ -18,4 +25,4 @@ Change `staging` first, check the preview, then merge into `production`.
 
 ## Run locally
 
-    python3 -m http.server 4173
+    python3 -m http.server 4173 --directory public

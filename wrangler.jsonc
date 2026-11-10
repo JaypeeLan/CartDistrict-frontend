@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cartdistrict",
+  "compatibility_date": "2026-11-10",
+  "assets": { "directory": "./public" },
+  "env": {
+    "staging": { "name": "cartdistrict-staging" }
+  }
+}
