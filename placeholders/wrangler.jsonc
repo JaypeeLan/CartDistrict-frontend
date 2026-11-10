@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cartdistrict-placeholder",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-10",
+  "workers_dev": false,
+  "preview_urls": false,
+  "env": {
+    "api": {
+      "name": "cartdistrict-api",
+      "vars": { "ROLE": "api" },
+      "routes": [{ "pattern": "api.cartdistrict.com", "custom_domain": true }]
+    },
+    "staging-api": {
+      "name": "cartdistrict-api-staging",
+      "vars": { "ROLE": "api" },
+      "routes": [{ "pattern": "staging-api.cartdistrict.com", "custom_domain": true }]
+    },
+    "admin": {
+      "name": "cartdistrict-admin",
+      "vars": { "ROLE": "admin" },
+      "routes": [{ "pattern": "admin.cartdistrict.com", "custom_domain": true }]
+    },
+    "staging-admin": {
+      "name": "cartdistrict-admin-staging",
+      "vars": { "ROLE": "admin" },
+      "routes": [{ "pattern": "staging-admin.cartdistrict.com", "custom_domain": true }]
+    }
+  }
+}
