@@ -3,7 +3,16 @@
   "name": "cartdistrict",
   "compatibility_date": "2026-11-10",
   "assets": { "directory": "./public" },
+  "routes": [
+    { "pattern": "cartdistrict.com", "custom_domain": true },
+    { "pattern": "www.cartdistrict.com", "custom_domain": true }
+  ],
   "env": {
-    "staging": { "name": "cartdistrict-staging" }
+    "staging": {
+      "name": "cartdistrict-staging",
+      "routes": [
+        { "pattern": "staging.cartdistrict.com", "custom_domain": true }
+      ]
+    }
   }
 }
